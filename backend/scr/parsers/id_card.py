@@ -40,7 +40,7 @@ def parse_idcard(text: str):
     id_card = re.sub(r"\s+", "", id_match.group()) if id_match else None
 
     # -------- FULL NAME --------
-    name_match = re.search(r"(นาย|นาง|นางสาว)\s+[^\n]+", text)
+    name_match = re.search(r"(นาย|นาง|น.ส.)\s+[^\n]+", text)
     full_name = name_match.group().strip() if name_match else None
 
     # -------- BIRTH DATE --------
